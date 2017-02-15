@@ -657,6 +657,8 @@ objects:
           value: "5"
         - name: ARTIFACT_DIR
           value: ""
+        - name: MAVEN_MIRROR_URL
+          value: ${NEXUS_URL}/content/groups/forum
         - name: MAVEN_ARGS
           value: package -DskipTests -e
         - name: MAVEN_ARGS_APPEND
