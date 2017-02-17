@@ -572,6 +572,20 @@ objects:
           name: hotels
       type: ImageChange
     - type: ConfigChange
+- apiVersion: v1
+  kind: HorizontalPodAutoscaler
+  metadata:
+   labels:
+     application: hotels
+   name: hotels
+  spec:
+   maxReplicas: 5
+   minReplicas: 1
+   scaleTargetRef:
+     apiVersion: extensions/v1beta1
+     kind: DeploymentConfig
+     name: hotels
+   targetCPUUtilizationPercentage: 10
 # FUSE FUSE FUSE FUSE FUSE FUSE FUSE FUSE FUSE FUSE FUSE FUSE FUSE FUSE FUSE FUSE FUSE FUSE 
 #    FUSE FUSE FUSE FUSE FUSE FUSE FUSE FUSE FUSE FUSE FUSE FUSE FUSE FUSE FUSE FUSE FUSE FUSE 
 - apiVersion: v1
