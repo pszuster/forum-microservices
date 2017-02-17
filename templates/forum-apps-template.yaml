@@ -572,7 +572,7 @@ objects:
           name: hotels
       type: ImageChange
     - type: ConfigChange
-- apiVersion: v1
+- apiVersion: autoscaling/v1
   kind: HorizontalPodAutoscaler
   metadata:
    labels:
